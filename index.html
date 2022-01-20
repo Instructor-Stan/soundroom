@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .info { display: none; height: 0em; }
+        </style>
+        <script>
+    function showUp() {
+        document.getElementById("paraUp").style.display = "inline";
+    }
+    function hideUp() {
+        document.getElementById("paraUp").style.display = "none";
+    }
+    function showDown() {
+        document.getElementById("paraDown").style.display = "inline";
+    }
+    function hideDown() {
+        document.getElementById("paraDown").style.display = "none";
+    }
+    function showCD() {
+        document.getElementById("paraPlayCD").style.display = "inline";
+    }
+    function hideCD() {
+        document.getElementById("paraPlayCD").style.display = "none";
+    }
+    function showPreach() {
+        document.getElementById("paraPreach").style.display = "inline";
+    }
+    function hidePreach() {
+        document.getElementById("paraPreach").style.display = "none";
+    }
+</script>
+    </head>
+    <body>
+        <h1>Sound Board Settings</h1>
+        <h2 class='header' id="powerUp" onclick="showUp()">Power Up</h2>
+        <div class='info' id="paraUp" onclick="hideUp()">
+        <p>
+            When you are preparing for a service, use these steps to assure all devices you will need
+            have power.
+            <ul>
+                <li>Power on the surge protector on the floor under the board.<br>This powers the 
+                sound board, wireless receivers, USB recorder, CD and tape player.</li>
+                <li>Check for lights on
+                    <ul>
+                        <li>the surge protector</li>
+                        <li>the both amplifiers to the right of the surge protector</li>
+                        <li>the CD player</li>
+                        <li>the USB recorder</li>
+                        <li>the all wireless receivers on the wire rack above the amplifiers</li>
+                    </ul>
+                </li>
+                <li>Make sure all channels are muted</li>
+                <li><em>Master L</em> is at level 0</li>
+                <li><em>Master R</em> is at level -30</li>
+                <li><em>Mon 1</em> is at level 0</li>
+                <li><em>Mon2</em> is at level 0</li>
+                <li>Put the USB drive in the USB recorder
+                    <ul>
+                        <li>Press the record button to prepare recording </li>
+                        <li>The display should change to "Preparing"</li>
+                        <li>After preparing the record light should start blinking<br>
+                        This means the recorder will begin recording when the "record" button is 
+                        pressed</li>
+                        <li>When the record button is pressed the display light should be on solid 
+                            and the display counter should increment each second to show it is 
+                            recording
+                        </li>
+                        <li>To stop the recording
+                            <ul>
+                                <li>Press the stop button on the recorder</li>
+                                <li><span style="color: red;">Wait</span> for "Finalizing" to disappear from the display</li>
+                                <li>Remove the USB drive</li>
+                                <li>Place the USB drive in the PC for processing</li>
+                            </ul>
+                    </ul>
+                </li>
+            </ul>
+        </p>
+        </div>
+        <h2 class='header' id="powerDown" onclick="showDown()">Power Down</h2>
+        <div class='info' id="paraDown" onclick="hideDown()">
+        <p>
+            When the service ends, follow these steps to properly power down the sound equipment
+            <ul>
+                <li>Make sure the USB recording has ended
+                    <ul>
+                        <li>The record light should be off - press the stop button if it is still 
+                            recording</li>
+                        <li>Make sure the display does not show "Finalizing" - if so, wait until 
+                            "Finalizing" disappears from the display</li>
+                        <li>Remove the USB drive from the recorder</li>
+                        <li>Place the USB drive in the PC for processing</li>
+                    </ul>
+                </li>
+                <li>Make sure all channels are muted</li>
+                <li><em>Master L</em> is at level 0</li>
+                <li><em>Master R</em> is at level -30</li>
+                <li><em>Mon 1</em> is at level 0</li>
+                <li><em>Mon2</em> is at level 0</li>
+                <li>Power off the surge protector on the floor under the board</li>
+            </ul>
+        </p>
+        </div>
+        <h2 class='header' id="playCD" onclick="showCD()">Playing a CD</h2>
+        <div class='info' id="paraPlayCD" onclick="hideCD()">
+        <p>
+            CDs are played in the Denon device on your right. Insert the disc. If it starts playing,
+            press the pause button.
+            <ul>
+                <li>Make sure the A/B switch between the PC and sound board is in the "B" position</li>
+                <li>Select the track you want to play using the track forward/backward buttons (you
+                    can use the remote or the front panel)</li>
+                <li><em>Channel 8?</em> unmuted - use slider to adjust volume (this is the music 
+                side of a split-track CD)</li>
+                <li>If the CD is split-track, leave track 7? muted.</li>
+                <li>Unmute the channels for each microphone that will be used</li>
+                <li>Mute all other channels</li>
+                <li><em>Master L</em> is at level 0</li>
+                <li><em>Master R</em> is at level 0</li>
+                <li><em>Mon 1</em> is at level 0</li>
+                <li><em>Mon2</em> is at level 0</li>
+                <li>After playing the song(s) move <em>Mon2</em> back to level -30</li>
+            </ul>
+        </p>
+        </div>
+        <h2 class='header' id="preach" onclick="showPreach()">Pastor is preaching</h2>
+        <div class='info' id="paraPreach" onclick="hidePreach()">
+            <p>
+                When the pastor is preaching here are the sound board settings.
+                <ul>
+                    <li><em>Channel 2</em> unmuted - use slider to adjust volume</li>
+                    <li>All other channels muted</li>
+                    <li><em>Master L</em> is at level 0</li>
+                    <li><em>Master R</em> is at level -30</li>
+                    <li><em>Mon 1</em> is at level 0</li>
+                    <li><em>Mon2</em> is at level 0</li>
+                </ul>
+            </p>
+            </div>
+        </body>
+</html>
