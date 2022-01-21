@@ -2,41 +2,16 @@
 <html>
     <head>
         <style>
-            .info { display: none; height: 0em; }
+            .info { display: none; height: 42px; }
             body {background-color:#008ddf; color:white; font-size: 1.5em; text-shadow: black 1px 1px;}
+            footer {font-size: smaller;}
         </style>
-        <script>
-            function showUp() {
-                document.getElementById("paraUp").style.display = "inline";
-            }
-            function hideUp() {
-                document.getElementById("paraUp").style.display = "none";
-            }
-            function showDown() {
-                document.getElementById("paraDown").style.display = "inline";
-            }
-            function hideDown() {
-                document.getElementById("paraDown").style.display = "none";
-            }
-            function showCD() {
-                document.getElementById("paraPlayCD").style.display = "inline";
-            }
-            function hideCD() {
-                document.getElementById("paraPlayCD").style.display = "none";
-            }
-            function showPreach() {
-                document.getElementById("paraPreach").style.display = "inline";
-            }
-            function hidePreach() {
-                document.getElementById("paraPreach").style.display = "none";
-            }
-        </script>
     </head>
     <body>
         <h1>Sound Board Settings</h1>
-        <h2 class='header' id="powerUp" onclick="showUp()">Power Up</h2>
+        <h2 class='header' id="powerUp"">Power Up</h2>
         <div class='info' id="paraUp" onclick="hideUp()">
-        <p>
+            <p>
             When you are preparing for a service, use these steps to assure all devices you will need
             have power.
             <ul>
@@ -79,9 +54,9 @@
             </ul>
         </p>
         </div>
-        <h2 class='header' id="powerDown" onclick="showDown()">Power Down</h2>
-        <div class='info' id="paraDown" onclick="hideDown()">
-        <p>
+        <h2 class='header' id="powerDown"">Power Down</h2>
+        <div class='info' id="paraDown">
+            <p>
             When the service ends, follow these steps to properly power down the sound equipment
             <ul>
                 <li>Make sure the USB recording has ended
@@ -103,8 +78,8 @@
             </ul>
         </p>
         </div>
-        <h2 class='header' id="playCD" onclick="showCD()">Playing a CD</h2>
-        <div class='info' id="paraPlayCD" onclick="hideCD()">
+        <h2 class='header' id="playCD"">Playing a CD</h2>
+        <div class='info' id="paraPlayCD"">
         <p>
             CDs are played in the Denon device on your right. Insert the disc. If it starts playing,
             press the pause button.
@@ -125,8 +100,8 @@
             </ul>
         </p>
         </div>
-        <h2 class='header' id="preach" onclick="showPreach()">Pastor is preaching</h2>
-        <div class='info' id="paraPreach" onclick="hidePreach()">
+        <h2 class='header' id="preach"">Pastor is preaching</h2>
+        <div class='info' id="paraPreach"">
             <p>
                 When the pastor is preaching here are the sound board settings.
                 <ul>
@@ -139,6 +114,27 @@
                 </ul>
             </p>
             </div>
-        <footer>Click a title to display the details<br>Click the details to hide the details</footer>
-        </body>
+        <footer>Click a task to display the details<br>Click the task to hide the details</footer>
+        <script>
+            var tasks = document.querySelectorAll('.header')
+            var details = document.querySelectorAll('.info')
+            for(let i=0; i<tasks.length; i++) {
+                console.log(`Running for loop - value = ${i}`)
+                tasks[i].addEventListener('click', function(){
+                    let state = details[i].style.display
+                    console.log(`upClick processing - state = ${state}`)
+                    if(state == 'inline')
+                        details[i].style.display = "none";
+                    else
+                        details[i].style.display = "inline";
+                    state = details[i].style.display
+                    console.log(`upClick processing - state = ${state}`)
+                })
+                details[i].addEventListener('click', function(){
+                        details[i].style.display = "none";
+                })
+            }
+        </script>
+
+    </body>
 </html>
